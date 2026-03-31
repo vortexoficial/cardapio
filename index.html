@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Tradição | Cardápio Criativo</title>
+    <meta name="description" content="Cardápio digital com pratos autorais, imagens atrativas, carrossel funcional e experiência moderna para restaurante.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo" aria-label="Sabor e Tradição">Sabor & <span>Tradição</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link is-active">Início</a></li>
+                    <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="header-cart" id="open-cart" aria-label="Abrir pedido">
+                <span class="cart-icon">Pedido</span>
+                <span class="cart-count" id="cart-count-desktop">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Cozinha brasileira contemporânea</p>
+                    <h1>Um cardápio com cara de casa e acabamento de restaurante premium.</h1>
+                    <p class="hero-text">Pratos autorais, grelhados intensos, sobremesas delicadas e bebidas pensadas para acompanhar cada momento do serviço.</p>
+                    <div class="hero-actions">
+                        <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+                        <a href="#experiencia" class="btn btn-secondary">Conhecer a casa</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div>
+                            <strong>12+</strong>
+                            <span>opções no menu</span>
+                        </div>
+                        <div>
+                            <strong>4,9/5</strong>
+                            <span>avaliação média</span>
+                        </div>
+                        <div>
+                            <strong>35 min</strong>
+                            <span>tempo médio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero-carousel" aria-label="Destaques do restaurante">
+                    <div class="carousel-track" id="carousel-track"></div>
+                    <div class="carousel-content">
+                        <p class="carousel-kicker" id="carousel-kicker"></p>
+                        <h2 id="carousel-title"></h2>
+                        <p id="carousel-description"></p>
+                        <div class="carousel-meta">
+                            <span id="carousel-price"></span>
+                            <span id="carousel-note"></span>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control" id="carousel-prev" aria-label="Slide anterior">&#10094;</button>
+                        <div class="carousel-dots" id="carousel-dots" aria-label="Indicadores do carrossel"></div>
+                        <button class="carousel-control" id="carousel-next" aria-label="Próximo slide">&#10095;</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="experience" id="experiencia">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Experiência completa</p>
+                    <h2>Cardápio organizado para vender melhor</h2>
+                </div>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <span>Seleção curada</span>
+                        <h3>Combinações com apelo visual</h3>
+                        <p>Os produtos foram distribuídos por categoria para facilitar a decisão e destacar pratos com maior valor percebido.</p>
+                    </article>
+                    <article class="experience-card">
+                        <span>Navegação clara</span>
+                        <h3>Carrossel corrigido e estável</h3>
+                        <p>Os banners agora são renderizados por JavaScript, com controles, indicadores, auto rotação e pausa ao interagir.</p>
+                    </article>
+                    <article class="experience-card">
+                        <span>Design mais maduro</span>
+                        <h3>Visual com direção de arte</h3>
+                        <p>Tipografia editorial, blocos com profundidade, contraste melhor e imagens em destaque para criar presença profissional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="cardapio">
+            <div class="container">
+                <div class="section-heading section-heading-split">
+                    <div>
+                        <p class="eyebrow">Menu da casa</p>
+                        <h2>Escolha por categoria</h2>
+                    </div>
+                    <p class="section-copy">Um cardápio dinâmico, com imagens, filtros rápidos e descrição pensada para conversão.</p>
+                </div>
+
+                <div class="category-filter" id="category-filter" role="tablist" aria-label="Filtrar produtos"></div>
+                <div class="products-grid" id="products-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+        <div class="container footer-grid">
+            <div>
+                <p class="eyebrow">Sabor & Tradição</p>
+                <h2>Aberto todos os dias, das 11h às 23h.</h2>
+            </div>
+            <div>
+                <p>Rua do Mercado, 245 - Centro</p>
+                <p>Pedidos e reservas: (11) 99999-2026</p>
+                <p>Instagram: @saboretradicao</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="mobile-cart-bar" id="mobile-cart-bar" aria-label="Abrir carrinho">
+        <div>
+            <strong id="cart-count-mobile">0 itens</strong>
+            <span>seu pedido</span>
+        </div>
+        <strong id="cart-total-mobile">R$ 0,00</strong>
+    </button>
+
+    <aside class="cart-sidebar" id="cart-sidebar" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">Pedido atual</p>
+                <h3 id="cart-title">Seu carrinho</h3>
+            </div>
+            <button class="close-cart" id="close-cart" aria-label="Fechar pedido">&#10005;</button>
+        </div>
+        <div class="cart-body" id="cart-body">
+            <p class="empty-cart">Seu carrinho está vazio. Adicione um item para começar.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="cart-total-sidebar">R$ 0,00</strong>
+            </div>
+            <button class="btn btn-primary btn-block" type="button">Finalizar pedido</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
