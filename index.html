@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Tradição | Cardápio Criativo</title>
+    <meta name="description" content="Cardápio digital com pratos autorais, imagens atrativas, carrossel funcional e experiência moderna para restaurante.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo" aria-label="Sabor e Tradição">Sabor & <span>Tradição</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inicio" class="nav-link is-active">Início</a></li>
+                    <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="header-cart" id="open-cart" aria-label="Abrir pedido">
+                <span class="cart-icon">Pedido</span>
+                <span class="cart-count" id="cart-count-desktop">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Cozinha brasileira contemporânea</p>
+                    <h1>Um cardápio com cara de casa e acabamento de restaurante premium.</h1>
+                    <p class="hero-text">Pratos autorais, grelhados intensos, sobremesas delicadas e bebidas pensadas para acompanhar cada momento do serviço.</p>
+                    <div class="hero-actions">
+                        <a href="#cardapio" class="btn btn-primary">Ver cardápio</a>
+                        <a href="#experiencia" class="btn btn-secondary">Conhecer a casa</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div>
+                            <strong>12+</strong>
+                            <span>opções no menu</span>
+                        </div>
+                        <div>
+                            <strong>4,9/5</strong>
+                            <span>avaliação média</span>
+                        </div>
+                        <div>
+                            <strong>35 min</strong>
+                            <span>tempo médio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero-carousel" aria-label="Destaques do restaurante">
+                    <div class="carousel-track" id="carousel-track"></div>
+                    <div class="carousel-content">
+                        <p class="carousel-kicker" id="carousel-kicker"></p>
+                        <h2 id="carousel-title"></h2>
+                        <p id="carousel-description"></p>
+                        <div class="carousel-meta">
+                            <span id="carousel-price"></span>
+                            <span id="carousel-note"></span>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control" id="carousel-prev" aria-label="Slide anterior">&#10094;</button>
+                        <div class="carousel-dots" id="carousel-dots" aria-label="Indicadores do carrossel"></div>
+                        <button class="carousel-control" id="carousel-next" aria-label="Próximo slide">&#10095;</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="experience" id="experiencia">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">A experiência da casa</p>
+                    <h2>Detalhes que transformam a visita em memória</h2>
+                </div>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <div class="experience-card-header">
+                            <div class="experience-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <path d="M6 18h20"></path>
+                                    <path d="M9 18c0-4.4 3.1-8 7-8s7 3.6 7 8"></path>
+                                    <path d="M12 22h8"></path>
+                                    <path d="M8 22h16"></path>
+                                    <path d="M10 26h12"></path>
+                                </svg>
+                            </div>
+                            <span>Cozinha autoral</span>
+                        </div>
+                        <h3>Ingredientes frescos com apresentação de destaque</h3>
+                        <p>Entradas, pratos e sobremesas são descritos para abrir o apetite e valorizar o cuidado da cozinha em cada finalização.</p>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-card-header">
+                            <div class="experience-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <path d="M16 6v10"></path>
+                                    <path d="M16 16l5 3"></path>
+                                    <circle cx="16" cy="16" r="10"></circle>
+                                    <path d="M12 4h8"></path>
+                                </svg>
+                            </div>
+                            <span>Serviço afinado</span>
+                        </div>
+                        <h3>Atendimento ágil do salão ao pedido online</h3>
+                        <p>O fluxo da página destaca sugestões da casa, acelera a escolha do cliente e conduz o pedido com mais clareza em qualquer dispositivo.</p>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-card-header">
+                            <div class="experience-icon" aria-hidden="true">
+                                <svg viewBox="0 0 32 32" role="presentation">
+                                    <path d="M10 6v10c0 3.3 2.7 6 6 6s6-2.7 6-6V6"></path>
+                                    <path d="M13 6h6"></path>
+                                    <path d="M12 26h8"></path>
+                                    <path d="M16 22v4"></path>
+                                </svg>
+                            </div>
+                            <span>Clima da casa</span>
+                        </div>
+                        <h3>Ambiente acolhedor com carta pensada para harmonizar</h3>
+                        <p>Bebidas, pratos especiais e atmosfera visual trabalham juntos para transmitir um restaurante elegante, convidativo e memorável.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="cardapio">
+            <div class="container">
+                <div class="section-heading section-heading-split">
+                    <div>
+                        <p class="eyebrow">Menu da casa</p>
+                        <h2>Escolha por categoria</h2>
+                    </div>
+                    <p class="section-copy">Um cardápio dinâmico, com imagens, filtros rápidos e descrição pensada para conversão.</p>
+                </div>
+
+                <div class="category-filter" id="category-filter" role="tablist" aria-label="Filtrar produtos"></div>
+                <div class="products-grid" id="products-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <p class="eyebrow">Sabor & Tradição</p>
+                <h2>Sabores brasileiros, serviço acolhedor e uma casa feita para receber bem.</h2>
+                <p class="footer-description">Aberto todos os dias, das 11h às 23h, com menu completo para salão, retirada e pedidos diretos.</p>
+            </div>
+            <div class="footer-links-group">
+                <h3>Atalhos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#experiencia">A experiência</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h3>Contato</h3>
+                <ul class="footer-contact-list">
+                    <li>Rua do Mercado, 245 - Centro</li>
+                    <li><a href="tel:+5511999992026">(11) 99999-2026</a></li>
+                    <li><a href="mailto:contato@saboretradicao.com.br">contato@saboretradicao.com.br</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h3>Redes sociais</h3>
+                <div class="social-links" aria-label="Redes sociais do restaurante">
+                    <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" role="presentation">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+                    </a>
+                    <a class="social-link" href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" role="presentation">
+                            <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.7.3-1 1-1z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-link" href="https://www.whatsapp.com" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" role="presentation">
+                            <path d="M20 12a8 8 0 0 1-11.8 7l-4.2 1 1.1-4A8 8 0 1 1 20 12z"></path>
+                            <path d="M9.6 8.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.2-.1.4.4.7 1 1.3 1.7 1.7.2.1.3 0 .4-.1l.6-.5c.2-.1.4-.2.6-.1l1.9.8c.4.1.4.3.4.5v.5c0 .2 0 .4-.4.6-.4.2-1 .4-1.6.2-1-.3-2-.8-3.1-1.9-1.1-1.1-1.7-2.1-1.9-3.1-.1-.6 0-1.2.2-1.6z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Sabor & Tradição. Todos os direitos reservados.</p>
+            <a class="footer-credit" href="https://agenciafuturadesign.com" target="_blank" rel="noreferrer">Desenvolvido por FUTURADESIGN</a>
+        </div>
+    </footer>
+
+    <button class="mobile-cart-bar" id="mobile-cart-bar" aria-label="Abrir carrinho">
+        <div>
+            <strong id="cart-count-mobile">0 itens</strong>
+            <span>seu pedido</span>
+        </div>
+        <strong id="cart-total-mobile">R$ 0,00</strong>
+    </button>
+
+    <aside class="cart-sidebar" id="cart-sidebar" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">Pedido atual</p>
+                <h3 id="cart-title">Seu carrinho</h3>
+            </div>
+            <button class="close-cart" id="close-cart" aria-label="Fechar pedido">&#10005;</button>
+        </div>
+        <div class="cart-body" id="cart-body">
+            <p class="empty-cart">Seu carrinho está vazio. Adicione um item para começar.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <strong id="cart-total-sidebar">R$ 0,00</strong>
+            </div>
+            <button class="btn btn-primary btn-block" type="button">Finalizar pedido</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
